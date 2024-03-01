@@ -16,7 +16,7 @@ services:
   backend:
     container_name: backend
     build: 
-      context: ./product
+      context: ./backend
       dockerfile: Dockerfile
     restart: always
     ports:
