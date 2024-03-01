@@ -3,18 +3,7 @@ import './App.css';
 import Card from './components/Card';
 
 function App() {
-  const [products, setProducts] = useState([]);
   const [responseText, setResponseText] = useState('');
-
-  async function onLoad() {
-    let response = await fetch("/api/products");
-    let responseBody = await response.json();
-    setProducts(responseBody);
-  }
-
-  useEffect(() => {
-    onLoad();
-  }, []);
 
   // GET 요청을 보내는 함수
   async function sendGetRequest(url) {
@@ -28,9 +17,7 @@ function App() {
       <h1>상품목록페이지</h1>
       <hr />
       <div>
-        {products.map((product, index) => (
-          <Card key={index} product={product} />
-        ))}
+        <Card />
       </div>
       {/* GET 요청 버튼들 */}
       <button onClick={() => sendGetRequest("/api/hello1")}>Hello 1 요청</button>
