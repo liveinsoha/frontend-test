@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import Card from './components/Card';
 
 function App() {
   const [responseText, setResponseText] = useState('');
@@ -16,9 +15,6 @@ function App() {
     <div>
       <h1>상품목록페이지</h1>
       <hr />
-      <div>
-        <Card />
-      </div>
       {/* GET 요청 버튼들 */}
       <button onClick={() => sendGetRequest("/api/hello1")}>Hello 1 요청</button>
       <button onClick={() => sendGetRequest("/api/hello2")}>Hello 2 요청</button>
