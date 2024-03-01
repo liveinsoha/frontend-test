@@ -35,6 +35,7 @@ function App() {
       {/* GET 요청 버튼들 */}
       <button onClick={() => sendGetRequest("/api/hello1")}>Hello 1 요청</button>
       <button onClick={() => sendGetRequest("/api/hello2")}>Hello 2 요청</button>
+      <button onClick={() => sendGetRequest("/api/hello3")}>Hello 3 요청</button>
       {/* 반환값을 보여주는 부분 */}
       {responseText && <p>반환값: {responseText}</p>}
     </div>
